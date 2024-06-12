@@ -9,9 +9,9 @@ const NewProductLayout = async ({
   children: React.ReactNode;
 }>) => {
   const authenticatedUser = await auth();
-  // const notifications = await getNotifications();
+  const notifications = await getNotifications();
 
-  // const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
+  const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
 
   if (!authenticatedUser) {
     redirect("/");
@@ -22,8 +22,8 @@ const NewProductLayout = async ({
       <body>
         <Navbar
           authenticatedUser={authenticatedUser}
-          // products={products}
-          // notifications={notifications}
+          products={products}
+          notifications={notifications}
         />
 
         {children}
