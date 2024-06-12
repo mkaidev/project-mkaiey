@@ -41,7 +41,7 @@ const ProductPage = async ({ params }: { params: IParams }) => {
                   key={category.id}
                   className="bg-gray-100 text-gray-600 
                             px-4 py-2 rounded-md
-                             cursor-pointer"
+                            cursor-pointer"
                 >
                   <h2 className="text-xs text-center">{category.name}</h2>
                 </Link>

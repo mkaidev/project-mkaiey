@@ -7,13 +7,13 @@ import {
 import { Fragment } from "react";
 import { X } from "lucide-react";
 
-interface ShareModalProps {
+interface ModalProps {
   visible: boolean;
   setVisible: React.Dispatch<React.SetStateAction<boolean>>;
   children: React.ReactNode;
 }
 
-const ShareModal: React.FC<ShareModalProps> = ({
+const EditProductModal: React.FC<ModalProps> = ({
   visible,
   setVisible,
   children,
@@ -39,11 +39,11 @@ const ShareModal: React.FC<ShareModalProps> = ({
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100 "
           leave="ease-in duration-200"
-          leaveFrom="opacity-100 scale-100"
+          leaveFrom="opacity-100 scale-100 "
           leaveTo="opacity-0 scale-95"
         >
           <div className="fixed inset-0 z-50 flex items-center justify-center">
-            <DialogPanel className="relative h-full xl:h-[550px] w-full mt-auto sm:mt-0 sm:w-[650px] flex bg-white k rounded-sm shadow-md">
+            <DialogPanel className="relative h-full w-full max-w-[1500px] flex bg-white rounded-sm shadow-md">
               <div className="absolute top-0 right-0 mt-4 mr-4">
                 <button
                   onClick={() => setVisible(false)}
@@ -53,7 +53,7 @@ const ShareModal: React.FC<ShareModalProps> = ({
                 </button>
               </div>
 
-              <div className="flex justify-center flex-col flex-1 px-8 py-10 text-left rounded-t-md">
+              <div className="overflow-auto flex justify-center flex-col flex-1 px-8 py-10 text-left rounded-t-md">
                 {children}
               </div>
             </DialogPanel>
@@ -64,4 +64,4 @@ const ShareModal: React.FC<ShareModalProps> = ({
   );
 };
 
-export default ShareModal;
+export default EditProductModal;

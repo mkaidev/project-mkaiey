@@ -1,4 +1,9 @@
-import { Dialog, Transition } from "@headlessui/react";
+import {
+  Dialog,
+  DialogPanel,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
 import { Fragment } from "react";
 import { X } from "lucide-react";
 
@@ -16,7 +21,7 @@ const ProductModal: React.FC<ModalProps> = ({
   return (
     <Transition show={visible} as={Fragment}>
       <Dialog onClose={() => setVisible(false)} static={true} open={visible}>
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter="ease-out duration-200"
           enterFrom="opacity-0"
@@ -26,23 +31,23 @@ const ProductModal: React.FC<ModalProps> = ({
           leaveTo="opacity-0"
         >
           <div className="fixed inset-0 z-50 transition-opacity bg-black bg-opacity-75 backdrop-filter backdrop-blur"></div>
-        </Transition.Child>
+        </TransitionChild>
 
-        <Transition.Child
+        <TransitionChild
           as={Fragment}
           enter="ease-out duration-300"
           enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100 "
+          enterTo="opacity-100 scale-100"
           leave="ease-in duration-200"
           leaveFrom="opacity-100 scale-100 "
-          leaveTo="opacity-0 scale-95 0"
+          leaveTo="opacity-0 scale-95"
         >
           <div className="fixed inset-0 z-50 flex items-center justify-center">
-            <Dialog.Panel className="relative h-full w-full xl:max-w-[1200px]  max-w-[1300px] flex bg-white rounded-sm shadow-md">
+            <DialogPanel className="relative h-full w-full xl:max-w-[1200px]  max-w-[1300px] flex bg-white rounded-sm shadow-md">
               <div className="absolute top-0 right-0 mt-4 mr-4">
                 <button
                   onClick={() => setVisible(false)}
-                  className="hover:opacity-70 focus:outline-none "
+                  className="hover:opacity-70 focus:outline-none"
                 >
                   <X className="w-5 h-5" aria-hidden="true" />
                 </button>
@@ -51,9 +56,9 @@ const ProductModal: React.FC<ModalProps> = ({
               <div className="overflow-auto flex justify-center flex-col flex-1 px-8 py-10 text-left rounded-t-md">
                 {children}
               </div>
-            </Dialog.Panel>
+            </DialogPanel>
           </div>
-        </Transition.Child>
+        </TransitionChild>
       </Dialog>
     </Transition>
   );

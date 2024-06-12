@@ -14,6 +14,6 @@ export const ourFileRouter = {
       return { ...req };
     })
     .onUploadComplete(() => {}),
-};
+} satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;

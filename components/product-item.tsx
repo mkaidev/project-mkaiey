@@ -29,7 +29,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
   const [currentProduct, setCurrentProduct] = useState<any>(null);
 
   const [hasUpvoted, setHasUpvoted] = useState(
-    product.upvoters?.includes(authenticatedUser?.user.id),
+    product.upvoters?.includes(authenticatedUser?.user.id)
   );
 
   const [totalUpvotes, setTotalUpvotes] = useState(product.upvotes || 0);
@@ -44,7 +44,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
   };
 
   const handleArrowClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     // Prevent the click event from propagating to the product item container
     e.stopPropagation();
@@ -53,13 +53,13 @@ const ProductItem: React.FC<ProductItemProps> = ({
   };
 
   const handleCategoryClick = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     e.stopPropagation();
   };
 
   const handleUpvoteClick = async (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
     e.stopPropagation();
 

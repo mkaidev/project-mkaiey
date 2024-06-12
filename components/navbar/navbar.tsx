@@ -14,9 +14,15 @@ import Submit from "./submit";
 
 interface NavbarProps {
   authenticatedUser?: any;
+  notifications?: any;
+  products?: any;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ authenticatedUser }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  authenticatedUser,
+  notifications,
+  products,
+}) => {
   const [authModalVisible, setAuthModalVisible] = useState(false);
 
   const handleButtonClick = () => {

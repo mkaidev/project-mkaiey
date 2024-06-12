@@ -86,7 +86,7 @@ const ProductModalContent: React.FC<ProductModalContentProps> = ({
   };
 
   const handleUpvoteClick = async (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.stopPropagation();
 
