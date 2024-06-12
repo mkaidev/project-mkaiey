@@ -17,19 +17,19 @@ const Menu = () => {
         <div
           onMouseEnter={() => setShowLaunchesMenu(true)}
           onMouseLeave={() => setShowLaunchesMenu(false)}
-          className="hover:text-[#3fd2ff] py-4"
+          className="hover:text-[#38d7ff] py-4"
         >
           Launches {showLaunchesMenu && <LaunchesMenu />}
         </div>
 
-        <Link href={"/categories"} className="hover:text-[#3fd2ff]">
+        <Link href={"/categories"} className="hover:text-[#38d7ff]">
           Categories
         </Link>
 
         <div
           onMouseEnter={() => setShowCommunityMenu(true)}
           onMouseLeave={() => setShowCommunityMenu(false)}
-          className="hover:text-[#3fd2ff] py-4"
+          className="hover:text-[#38d7ff] py-4"
         >
           Community {showCommunityMenu && <CommunityMenu />}
         </div>
