@@ -96,8 +96,8 @@ const ProductItem: React.FC<ProductItemProps> = ({
       py-4 w-full cursor-pointer p-2   
       rounded-md
       hover:bg-gradient-to-bl
-    from-[#ffe6d3]
-    via-[#fdfdfd]
+    from-[#d3fff0]
+    via-[#e5f8fd]
     to-white"
     >
       <div className="flex items-center justify-between">

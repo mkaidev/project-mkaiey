@@ -3,7 +3,7 @@ import { getOwnerProducts, isUserPremium } from "@/lib/server-actions";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { PiPlus } from "react-icons/pi";
+import { PiCrown, PiPlus } from "react-icons/pi";
 
 const MyProducts = async () => {
   const authenticatedUser = await auth();
