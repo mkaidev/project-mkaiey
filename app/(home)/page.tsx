@@ -3,8 +3,7 @@ import { getActiveProducts } from "@/lib/server-actions";
 
 const Home = async () => {
   const activeProducts = await getActiveProducts();
-
-  console.log(activeProducts, "active projects here");
+  // console.log(activeProducts, "active projects here");
 
   return (
     <>

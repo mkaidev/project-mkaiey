@@ -44,8 +44,11 @@ const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center text-sm space-x-6 cursor-pointer">
           {authenticatedUser ? (
             <>
-              <Submit />
-              <NotificationIcon />
+              <Submit
+                products={products}
+                authenticatedUser={authenticatedUser}
+              />
+              <NotificationIcon notifications={notifications} />
               <Avatar authenticatedUser={authenticatedUser} />
             </>
           ) : (

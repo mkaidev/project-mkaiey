@@ -17,7 +17,7 @@ const ProductPage = async ({ params }: { params: IParams }) => {
 
   const productImageUrls = product.images.map((image: any) => image.url);
 
-  console.log(product, "project info");
+  // console.log(product, "project info");
 
   return (
     <div className="mx-auto md:w-3/5 px-6 py-10 md:px-0">

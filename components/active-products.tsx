@@ -75,7 +75,7 @@ const ActiveProducts: React.FC<ActiveProductsProps> = async ({
     };
   });
 
-  console.log(formattedActiveProducts, "formattedActiveProducts");
+  // console.log(formattedActiveProducts, "formattedActiveProducts");
 
   return (
     <div className="w-full">

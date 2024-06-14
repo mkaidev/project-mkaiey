@@ -98,8 +98,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
      hover:bg-gradient-to-bl
     from-[#ffe6d3]
     via-[#fdfdfd]
-    to-white
-    "
+    to-white"
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center">

@@ -468,7 +468,6 @@ export const upvoteProduct = async (productId: string) => {
       });
 
       // notify the product owner about the upvote
-
       if (productOwner && productOwner.userId !== userId) {
         await db.notification.create({
           data: {
@@ -717,7 +716,6 @@ export const isUserPremium = async () => {
   const userId = authenticatedUser.user.id;
 
   // get the user
-
   const user = await db.user.findUnique({
     where: {
       id: userId,

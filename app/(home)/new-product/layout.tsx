@@ -1,6 +1,10 @@
 import { auth } from "@/auth";
 import Navbar from "@/components/navbar/navbar";
-import { getNotifications, getProductsByUserId } from "@/lib/server-actions";
+import {
+  getNotifications,
+  getProductsByUserId,
+  isUserPremium,
+} from "@/lib/server-actions";
 import { redirect } from "next/navigation";
 
 const NewProductLayout = async ({
@@ -12,6 +16,12 @@ const NewProductLayout = async ({
   const notifications = await getNotifications();
 
   const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
+
+  const isPremium = await isUserPremium();
+
+  if (!isPremium && products.length === 2) {
+    redirect("/");
+  }
 
   if (!authenticatedUser) {
     redirect("/");
