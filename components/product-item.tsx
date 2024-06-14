@@ -93,9 +93,9 @@ const ProductItem: React.FC<ProductItemProps> = ({
     <div
       onClick={handleProductItemClick}
       className="
-    py-4 w-full cursor-pointer p-2   
-    rounded-md
-     hover:bg-gradient-to-bl
+      py-4 w-full cursor-pointer p-2   
+      rounded-md
+      hover:bg-gradient-to-bl
     from-[#ffe6d3]
     via-[#fdfdfd]
     to-white"
@@ -165,7 +165,7 @@ const ProductItem: React.FC<ProductItemProps> = ({
               <div
                 className="border px-2 rounded-md flex flex-col 
               items-center bg-gradient-to-bl 
-              from-[#ff6154] to-[#ff4582] border-[#ff6154]
+              from-[#38d7ff] to-[#2cc0e6] border-[#38d7ff]
               text-white"
               >
                 <PiCaretUpFill className="text-xl" />

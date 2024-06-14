@@ -3,7 +3,7 @@
 import { ImagesUploader } from "@/components/images-uploader";
 import { LogoUploader } from "@/components/logo-uploader";
 import Image from "next/image";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import {
   Popover,
@@ -58,6 +58,11 @@ const categories = [
 ];
 
 const NewProduct = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
   const [name, setName] = useState("");
@@ -69,7 +74,6 @@ const NewProduct = () => {
   const [discord, setDiscord] = useState("");
 
   const [date, setDate] = React.useState<Date | undefined>(new Date());
-
   const [uploadedLogoUrl, setUploadedLogoUrl] = useState<string>("");
 
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -104,7 +108,6 @@ const NewProduct = () => {
     setName(truncatedName);
 
     //create slug from product name
-
     const slugValue = truncatedName
       .toLowerCase()
       .replace(/\s+/g, "-") // Replace spaces with hyphens
@@ -329,6 +332,10 @@ const NewProduct = () => {
       setLoading(false);
     }
   };
+
+  if (!mounted) {
+    return null; // return this null to avoid hydration errors
+  }
 
   return (
     <div className="flex items-center justify-center py-8 md:py-20">

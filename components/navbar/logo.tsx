@@ -11,11 +11,18 @@ const Logo = () => {
           width={40}
           height={40}
           className="p-1"
+          priority
         />
       </Link>
 
       <Link href={"/"} className="hidden md:block">
-        <Image src={"/logo/logo.png"} alt="logo" width={100} height={100} />
+        <Image
+          src={"/logo/logo.png"}
+          alt="logo"
+          width={100}
+          height={100}
+          style={{ width: "100%", height: "auto" }}
+        />
       </Link>
     </div>
   );

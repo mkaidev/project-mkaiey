@@ -130,7 +130,7 @@ const ProductModalContent: React.FC<ProductModalContentProps> = ({
                 className={`rounded-md flex justify-center items-center p-5 
                 gap-x-3 cursor-pointer bg-gradient-to-r w-full xl:w-56 ${
                   hasUpvoted
-                    ? "from-[#ff6154] to-[#ff4582] border-[#ff6154] text-white"
+                    ? "from-[#38d7ff] to-[#2cc0e6] border-[#38d7ff] text-white"
                     : "text-black border"
                 }`}
                 onClick={handleUpvoteClick}
@@ -205,7 +205,7 @@ const ProductModalContent: React.FC<ProductModalContentProps> = ({
             <div className="flex justify-end mt-4">
               <button
                 onClick={handleCommentSubmit}
-                className="bg-[#ff6154] text-white p-2 rounded-md"
+                className="bg-[#38d7ff] text-white p-2 rounded-md"
               >
                 Comment
               </button>
