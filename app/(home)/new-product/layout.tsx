@@ -8,14 +8,15 @@ const NewProductLayout = async ({
   children: React.ReactNode;
 }>) => {
   const authenticatedUser = await auth();
+
+  if (!authenticatedUser) {
+    redirect("/");
+  }
+
   const isPremium = await isUserPremium();
   const products = await getProductsByUserId(authenticatedUser?.user?.id || "");
 
   if (!isPremium && products.length === 2) {
-    redirect("/");
-  }
-
-  if (!authenticatedUser) {
     redirect("/");
   }
 

@@ -1,4 +1,4 @@
-# This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+# Full Stack SaaS Product Hunt Clone + Admin Dashboard: Next js, React, Stripe, Uploadthing 🎉✨
 
 ## Getting Started
 
@@ -16,21 +16,50 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Create .env file on root folder
 
-## Learn More
+```bash
+AUTH_SECRET=
 
-To learn more about Next.js, take a look at the following resources:
+GITHUB_ID=
+GITHUB_SECRET=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+GOOGLE_ID=
+GOOGLE_SECRET=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+DATABASE_URL=""
+# uncomment next line if you use Prisma <5.10
+DATABASE_URL_UNPOOLED=""
 
-## Deploy on Vercel
+UPLOADTHING_SECRET=
+UPLOADTHING_APP_ID=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+STRIPE_WEBHOOK_SIGNING_SECRET=
+STRIPE_SECRET_KEY=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ADMIN_USERNAME=
+ADMIN_PASSWORD=
+```
+
+If you want to learn how to create it please follow below tutorial👇:
+➡ Tutorial Link 💚: [Build and Deploy Full Stack SaaS Product Hunt Clone + Admin Dashboard: Next js, React, Stripe (2024)](https://www.youtube.com/watch?v=LHF_rcA35P8)
+
+---
+
+## ⭐DO NOT FORGET TO STAR THIS REPO⭐
+
+---
+
+### Image#1: login page
+
+![Mkaidev Web Development](https://utfs.io/f/2db92148-2537-47dd-bb7c-88612baf452e-sf4gaw.png)
+
+### Image#2: home page
+
+![Mkaidev Web Development](https://utfs.io/f/f684c79a-4572-45e8-a6e0-b100248df09f-80z7de.png)
+
+### Image#3: admin page
+
+![Mkaidev Web Development](https://utfs.io/f/249b0ec3-75fd-4510-a04d-bce368488656-di82m.png)

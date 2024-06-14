@@ -70,7 +70,7 @@ const PendingProducts: React.FC<PendingProductsProps> = ({
     };
   });
 
-  console.log(formattedProducts, "formatted products here");
+  // console.log(formattedProducts, "formatted products here");
 
   const handleViewProductModal = (product: any) => {
     const formattedProduct = formattedProducts.find(

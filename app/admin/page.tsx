@@ -35,7 +35,7 @@ const Admin = async () => {
   const premiumUsers = users.filter((user) => user.isPremium);
 
   return (
-    <div className="px-8 md:px-20">
+    <div className="px-4 md:px-10">
       <div>
         <div className="flex justify-between items-center">
           <div className="flex gap-x-6 items-center py-10">
@@ -45,7 +45,7 @@ const Admin = async () => {
                 alt="logo"
                 width={100}
                 height={100}
-                className="w-24 h-12 md:w-32 md:h-16 cursor-pointer"
+                className="w-24 h-10 cursor-pointer"
               />
             </Link>
 
