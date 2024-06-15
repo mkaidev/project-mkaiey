@@ -19,7 +19,9 @@ export const createCheckoutSession = async ({ email }: { email: string }) => {
         },
       ],
       mode: "subscription",
+      // success_url: `http://localhost:3000/new-product`,
       success_url: `https://mkaidev-pro.vercel.app/new-product`,
+      // cancel_url: `http://localhost:3000`,
       cancel_url: `https://mkaidev-pro.vercel.app`,
     });
 
@@ -63,6 +65,7 @@ export const createCustomerLink = async () => {
 
     const portal = await stripe.billingPortal.sessions.create({
       customer: customer.id,
+      // return_url: `http://localhost:3000/my-products`,
       return_url: `https://mkaidev-pro.vercel.app/my-products`,
     });
 

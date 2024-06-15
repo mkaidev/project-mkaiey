@@ -20,20 +20,10 @@ const MyProducts = async () => {
       {products.length === 0 ? (
         <div>
           <h1 className="text-3xl font-bold">No projects found </h1>
-          <p className="text-gray-500">
-            Looks like you have not created any projects yet, click the button
-            below to get started
+          <p className="text-gray-500 mt-4">
+            Looks like you have not created any projects yet, click the{" "}
+            <span className="text-emerald-300">submit</span> menu to get started
           </p>
-
-          <Link href={"/new-product"}>
-            <div
-              className="bg-[#38d7ff] text-white p-4 
-            rounded-md mt-4 w-60 h-56 flex items-center justify-center flex-col"
-            >
-              <PiPlus className="text-3xl mb-4" />
-              <p className="text-lg">Create a project</p>
-            </div>
-          </Link>
         </div>
       ) : (
         <div>
